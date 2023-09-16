@@ -8,6 +8,7 @@ body {
 
 a {
   color: #FFFFFF
+  
 }
 
 a:visited {
@@ -34,9 +35,6 @@ li {
   border-width: 5px;
 }
 
-.bookmarks {
-  /* align: left; */
-}
 
 
 #editdialog input {
