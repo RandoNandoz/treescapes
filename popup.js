@@ -43,6 +43,7 @@ function dumpNode(bookmarkNode, query) {
     }
 
     const anchor = $('<a>');
+    anchor.addClass('button');
     anchor.attr('href', bookmarkNode.url);
     anchor.text(bookmarkNode.title);
 
