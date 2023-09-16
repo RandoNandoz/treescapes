@@ -17,6 +17,7 @@ function dumpBookmarks(query) {
   ) {
     $('#bookmarks').append(dumpTreeNodes(bookmarkTreeNodes, query));
   });
+  console.log("success");
 }
 
 function dumpTreeNodes(bookmarkNodes, query) {
