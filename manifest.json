@@ -2,6 +2,7 @@
     "manifest_version": 3,
     "name": "Treescapes",
     "description": "A better way to view your bookmarks",
+    "permissions": ["bookmarks"],
     "version": "1.0",
     "permissions": [
         "bookmarks"
@@ -14,5 +15,12 @@
       "32": "images/icon-32.png",
       "48": "images/icon-48.png",
       "128": "images/icon-128.png"
+    },
+    "action": {
+      "default_title": "My Bookmarks",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
     }
   }
+
+  
