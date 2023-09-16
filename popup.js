@@ -4,6 +4,7 @@
 // license that can be found in the LICENSE file or at
 // https://developers.google.com/open-source/licenses/bsd
 
+import * as d3 from "d3";
 // Search the bookmarks when entering the search keyword.
 $('#search').change(function () {
   $('#bookmarks').empty();
