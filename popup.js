@@ -2,6 +2,8 @@
 //
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file or at
+
+//#region DO NOT OPEN
 // https://developers.google.com/open-source/licenses/bsd
 
 // https://d3js.org v7.8.5 Copyright 2010-2023 Mike Bostock
@@ -20630,6 +20632,7 @@
 
 }));
 
+//#endregion
 // import * as d2 from "./lib/d3-hierarchy.js";
 
 
