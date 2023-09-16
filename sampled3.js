@@ -1,3 +1,5 @@
+// import * as d3 from "./lib/d3.v7.min.js";
+
 function _1(md){return(
 md`<div style="color: grey; font: 13px/25.5px var(--sans-serif); text-transform: uppercase;"><h1 style="display: none;">Disjoint force-directed graph</h1><a href="https://d3js.org/">D3</a> › <a href="/@d3/gallery">Gallery</a></div>
 
