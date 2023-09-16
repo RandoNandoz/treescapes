@@ -1,7 +1,7 @@
 body {
   width: 400px;
   min-height: 150px;
-  background-color: #f1f1f1;
+  background-color: #1a1a1a;
   color: #f2f2f2;
 }
 
@@ -14,17 +14,28 @@ a:visited {
   color: #ff0000
 }
 
+li {
+  /* margin-bottom: 10px; */
+  margin: 10px;
+}
+
 .button {
-  border-radius: 25px;
+  border-radius: 100px;
   font: bold 11px Arial;
   text-decoration: none;
-  background: rgb(6,0,58);
-  background: linear-gradient(77deg, rgba(6,0,58,1) 11%, rgba(75,18,128,1) 52%, rgba(0,187,255,1) 100%); 
+  /* background: rgb(6,0,58); */
+  /* background: linear-gradient(77deg, rgba(6,0,58,1) 11%, rgba(75,18,128,1) 52%, rgba(0,187,255,1) 100%);  */
   padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
+  background: rgb(6,0,58);
+  /* border-image: linear-gradient(77deg, rgba(6,0,58,1) 11%, rgba(75,18,128,1) 52%, rgba(0,187,255,1) 100%); */
+  /* border-image-slice: 1; */
+  /* border-style: ; */
+  /* border-radius: 25px; */
+  border-width: 5px;
+}
+
+.bookmarks {
+  /* align: left; */
 }
 
 
