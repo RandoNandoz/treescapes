@@ -9,25 +9,27 @@ $('#search').change(function () {
   $('#bookmarks').empty();
   dumpBookmarks($('#search').val());
 });
-
+let depth = 0;
 // Traverse the bookmark tree, and print the folder and nodes.
 function dumpBookmarks(query) {
   const bookmarkTreeNodes = chrome.bookmarks.getTree(function (
     bookmarkTreeNodes
   ) {
-    $('#bookmarks').append(dumpTreeNodes(bookmarkTreeNodes, query));
+    $('#bookmarks').append(dumpTreeNodes(bookmarkTreeNodes, query, depth));
   });
   console.log("success");
 }
 
-function dumpTreeNodes(bookmarkNodes, query) {
+
+function dumpTreeNodes(bookmarkNodes, query, depth) {
   const list = $('<ul>');
   for (let i = 0; i < bookmarkNodes.length; i++) {
+
     list.attr('style', "float:left");
     list.attr('style', "margin-left: 0px");
     list.attr('style', "padding-left: 20px");
-    
-    list.append(dumpNode(bookmarkNodes[i], query));
+
+    list.append(dumpNode(bookmarkNodes[i], query, depth));
   }
 
   return list;
@@ -49,7 +51,17 @@ function dumpNode(bookmarkNode, query) {
     anchor.addClass('button');
     anchor.attr('href', bookmarkNode.url);
     anchor.text(bookmarkNode.title);
-    anchor.attr('style', "float:left")
+    anchor.attr('style', "float:left");
+    anchor.attr('style', "word-wrap: break-word");
+
+    if(depth == 0|| depth == 1){
+      anchor.attr("style", "background: #002145");
+      //anchor.attr("style", "font-size: 60px");
+      //anchor.attr("style", "font-weight: bold");
+    }
+    else if (depth == 3){
+      anchor.attr("style", "background: #07485B");
+    }
 
     /*
      * When clicking on a bookmark in the extension, a new tab is fired with
@@ -189,10 +201,16 @@ function dumpNode(bookmarkNode, query) {
       .append(anchor);
   }
 
+  
   const li = $(bookmarkNode.title ? '<li>' : '<div>').append(span);
 
   if (bookmarkNode.children && bookmarkNode.children.length > 0) {
-    li.append(dumpTreeNodes(bookmarkNode.children, query));
+    
+    depth++;
+    console.log(depth);
+    li.append(dumpTreeNodes(bookmarkNode.children, query, depth));
+    depth--;
+    console.log(depth);
   }
 
   return li;
