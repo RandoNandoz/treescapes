@@ -32,6 +32,8 @@ li {
   width: 300px;
 }
 #searchbar{
+  margin-top: 20px;
+  margin-left: 20px;
   font-size: 30px;
   font-family: 'Open Sans';
   font-weight:1000;
